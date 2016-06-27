@@ -1,3 +1,4 @@
+using System;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
@@ -44,8 +45,10 @@ namespace MusicStore
             }
             else
             {
+
+                var dbpw = Environment.GetEnvironmentVariable("MUSICSTORE_SQL_PW");
                 services.AddDbContext<MusicStoreContext>(options =>
-                    options.UseSqlServer(Configuration[StoreConfig.ConnectionStringKey.Replace("__", ":")]));
+                    options.UseSqlServer(Configuration[StoreConfig.ConnectionStringKey.Replace("__", ":")] + $";Password={dbpw}"));
             }
 
             // Add Identity services to the services container

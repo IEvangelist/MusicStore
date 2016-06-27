@@ -7,7 +7,7 @@
   "DefaultAdminPassword": "YouShouldChangeThisPassword1!",
   "Data": {
     "DefaultConnection": {
-      "ConnectionString": "Server=asp-xhpsc1;Database=MusicStore;Trusted_Connection=False;MultipleActiveResultSets=true;User ID=sa;Password=indgaunt~SQL2014"
+      "ConnectionString": "Server=asp-xhpsc1;Database=MusicStore;Trusted_Connection=False;MultipleActiveResultSets=true;User ID=sa"
     }
   }
 }
